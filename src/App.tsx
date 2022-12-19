@@ -1,11 +1,13 @@
 // import VehicleCard from "./components/vehicleCard/index"
+import Header from "./components/header/index"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <Header></Header>
+      <main>
         {/* <VehicleCard></VehicleCard> */}
-      </header>
+      </main>
     </div>
   );
 }
