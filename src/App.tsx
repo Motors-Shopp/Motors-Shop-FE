@@ -1,10 +1,14 @@
-import "./App.css";
+// import VehicleCard from "./components/vehicleCard/index"
+import Header from "./components/header/index"
 
 function App() {
   return (
-    <>
-      <div className="App"></div>
-    </>
+    <div className="App">
+      <Header></Header>
+      <main>
+        {/* <VehicleCard></VehicleCard> */}
+      </main>
+    </div>
   );
 }
 
