@@ -47,7 +47,7 @@ export const StyleNavBar = styled.div`
     margin-top: 20px;
 }
 
-button{
+.btnHome{
     margin-right: 2px;
     margin-left: 2px;
     width: 98%;
@@ -107,14 +107,16 @@ button{
     margin-top: 16px;
 }
 
-button{
-    margin-right: 5px;
-    margin-left: 5px;
-    width: 100px;
+.btnHome{
+    margin-right: 2px;
+    margin-left: 2px;
+    width: 98%;
     color: white;
     border: 1px solid #ffffff;
     background-color: #6100ff;
-    height: 25px;
+    height: 30px;
+    margin-bottom: 8px;
 }
+
 
 }`
