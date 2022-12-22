@@ -1,15 +1,16 @@
 import { StyleModalCreateAnuncio } from "./style";
 
-// import * as yup from "yup";
-// import { useForm } from "react-hook-form";
-// import { yupResolver } from "@hookform/resolvers/yup";
-
-function modalCreateAnuncio({ setModal }: any): any {
- 
+function modalCreateAnuncio({ setTipoVeicle,setModal,handleSubmit,onSubmitFunction,register,errors }: any): any {
 
   return (
     <StyleModalCreateAnuncio>
-        <div className="barCriarAnuncio">
+      <form onSubmit={handleSubmit(onSubmitFunction)}>
+        {/* <input placeholder="Nome" {...register("name")} />
+        {errors.name?.message}
+        <br></br>
+        <button className="btnModal" type="submit"></button>
+       */}
+      <div className="barCriarAnuncio">
             <p className="textAjusting1">Criar anuncio</p>
             <div
             onClick={() => {
@@ -29,11 +30,11 @@ function modalCreateAnuncio({ setModal }: any): any {
         </div>
         <p className="textAjusting1">informações do veiculo</p>
         <p className="textAjusting1">Titulo</p>
-        <input placeholder="titulo" className="inputModal1" type="text" />
+        <input {...register("Titulo")} placeholder="titulo" className="inputModal1" type="text" />
         <div className="anoKMPreco">
             <div>
             <p>Ano</p>
-            <input placeholder="Ano" className="inputModal2" type="text" />
+            <input {...register("Ano")} placeholder="Ano" className="inputModal2" type="text" />
             </div>
             <div>
             <p>Quilometragem</p>
@@ -41,27 +42,29 @@ function modalCreateAnuncio({ setModal }: any): any {
                 placeholder="Quilometragem"
                 className="inputModal2"
                 type="text"
+                {...register("Quilometragem")}
             />
             </div>
             <div>
             <p>Preço</p>
-            <input placeholder="Preço" className="inputModal2" type="text" />
+            <input {...register("Preço")} placeholder="Preço" className="inputModal2" type="text" />
             </div>
         </div>
         <p className="textAjusting1">descrisção</p>
-        <input placeholder="descrisção" className="inputModal3" type="text" />
+        <input {...register("descrisção")} placeholder="descrisção" className="inputModal3" type="text" />
         <p className="textAjusting1">tipo de veiculo</p>
         <div className="conteinerBtnModal">
-            <button className="btnModal">Carro</button>
-            <button className="btnModal">Moto</button>
+            <button onClick={()=>{setTipoVeicle("Carro")}} className="btnModal">Carro</button>
+            <button onClick={()=>{setTipoVeicle("Moto")}} className="btnModal">Moto</button>
         </div>
         <p className="textAjusting1">imagem da capa</p>
-        <input placeholder="imagem da capa" className="inputModal1" type="text" />
+        <input {...register("imagemDaCapa")} placeholder="imagem da capa" className="inputModal1" type="text" />
         <p className="textAjusting1">1* imagem da galeria</p>
         <input
             placeholder="1* imagem da galeria"
             className="inputModal1"
             type="text"
+            {...register("ImagemDaGaleria1")}
         />
         <div className="caixaDeCampoParaImagem">
             <p>Adicionar campo para a imagem da galeria</p>
@@ -79,6 +82,8 @@ function modalCreateAnuncio({ setModal }: any): any {
             Criar Anuncio
             </button>
         </div>
+      </form>
+
     </StyleModalCreateAnuncio>
   );
 }
