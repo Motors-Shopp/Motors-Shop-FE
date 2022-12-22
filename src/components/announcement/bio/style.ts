@@ -10,8 +10,9 @@ export const ContentBio = styled.div`
   justify-content: space-evenly;
 
   background: var(--grey10);
+  border-radius: 4px;
 
-  margin: 0;
+  margin-top: 1rem;
 
   img {
     width: 6.5rem;

@@ -2,7 +2,7 @@ import ButtonBrand1 from "../../buttons/ButtonBrand1";
 import { user } from "../user";
 import { ContentBoxMessage } from "./style";
 
-function BoxMessage() {
+function BoxMessage(): JSX.Element {
   return (
     <ContentBoxMessage>
       <div>
