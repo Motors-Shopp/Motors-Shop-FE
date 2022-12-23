@@ -1,7 +1,7 @@
 import { StyleHeader } from "./style";
 
 
-function Header(): any {
+function Header(): JSX.Element {
 
     return <StyleHeader>
         <header>
