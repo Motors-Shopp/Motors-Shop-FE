@@ -1,7 +1,7 @@
 import { vehicle } from "../vehicle";
 import { ContentDescription } from "./style";
 
-function Description() {
+function Description(): JSX.Element {
   return (
     <ContentDescription>
       <h4>Descrição</h4>
