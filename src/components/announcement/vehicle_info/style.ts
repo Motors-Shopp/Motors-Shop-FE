@@ -40,11 +40,12 @@ export const ContentVehicleInfo = styled.div`
     div:first-of-type {
       display: flex;
 
-      width: 7.063rem;
+      width: 7.07rem;
       height: 2rem;
 
       flex-direction: row;
       justify-content: space-between;
+      align-items: flex-end;
 
       p {
         display: flex;
