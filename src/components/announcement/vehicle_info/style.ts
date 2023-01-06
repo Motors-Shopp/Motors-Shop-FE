@@ -8,11 +8,13 @@ export const ContentVehicleInfo = styled.div`
   align-items: flex-start;
 
   width: 46.938rem;
-  height: 14.962rem;
+  height: 19.962rem;
 
   padding: 1.75rem 2.75rem;
 
   background: var(--grey10);
+
+  gap: 8px;
 
   div:first-of-type {
     display: flex;
@@ -38,11 +40,12 @@ export const ContentVehicleInfo = styled.div`
     div:first-of-type {
       display: flex;
 
-      width: 7.063rem;
+      width: 7.07rem;
       height: 2rem;
 
       flex-direction: row;
       justify-content: space-between;
+      align-items: flex-end;
 
       p {
         display: flex;
@@ -78,6 +81,7 @@ export const ContentVehicleInfo = styled.div`
       font-size: 1rem;
 
       color: var(--grey1);
+      margin-top: 1rem;
     }
   }
 

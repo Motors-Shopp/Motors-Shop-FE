@@ -12,13 +12,8 @@ export const ContentDescription = styled.div`
 
   background: var(--grey10);
   padding: 2.25rem 2.75rem;
-  /* 
-  div:first-of-type {
-    display: flex;
 
-    width: 46.938rem; 
-
-  } */
+  margin-top: 2rem;
 
   h4 {
     font-family: "Lexend";
@@ -32,6 +27,7 @@ export const ContentDescription = styled.div`
     font-family: "Inter";
     font-weight: 400;
     font-size: 1rem;
+    text-align: initial;
 
     color: var(--grey2);
   }

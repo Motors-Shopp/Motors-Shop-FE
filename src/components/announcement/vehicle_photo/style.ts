@@ -10,8 +10,14 @@ export const ContentVehiclePhoto = styled.div`
 
   background: var(--grey10);
 
+  align-items: center;
+  justify-content: center;
+
   img {
     width: 27.563rem;
     height: 15.81rem;
+  }
+
+  @media (max-width: 375px) {
   }
 `;
