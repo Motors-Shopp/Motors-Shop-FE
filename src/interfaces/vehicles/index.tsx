@@ -8,6 +8,7 @@ interface IVehicle {
   km: number;
   price: number;
   description: string;
+  typeOfVehicle?: string;
   img: string;
 }
 
