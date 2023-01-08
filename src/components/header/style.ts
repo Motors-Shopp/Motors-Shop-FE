@@ -74,9 +74,11 @@ export const StyleHeader = styled.div`
     font-size: 15px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     color:#ced4da ;
     border-right:solid;
     align-items: center;
+    cursor: pointer;
 }
 
 p{

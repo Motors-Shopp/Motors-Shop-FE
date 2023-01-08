@@ -17,4 +17,7 @@ export const ContentVehiclePhoto = styled.div`
     width: 27.563rem;
     height: 15.81rem;
   }
+
+  @media (max-width: 375px) {
+  }
 `;

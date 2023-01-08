@@ -9,7 +9,8 @@ export const vehicle: IVehicle = {
   year: "2013",
   km: 0,
   price: 89.5,
+  typeOfVehicle: "car",
   description:
-    "um carro muito maneiro que corre em velocidades nunca antes corridas, que possui cores nunca antes vistas e que o motor faz um barulho nunca antes escutado, um carro para motoristas nunca antes enxergados, mas que agora foram notados pela Mercedez",
+    "um carro muito maneiro que corre em velocidades nunca antes corridas!",
   img: "https://img2.icarros.com/dbimg/imgmodelo/2/323_7.png",
 };

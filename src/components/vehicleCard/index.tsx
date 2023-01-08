@@ -4,7 +4,6 @@ import { Card } from "./style";
 // import { GlobalStyle } from "../../styles/global";
 
 function VehicleCard(): any {
-
   return ggg.map((produto, index) => (
     <Card>
       <div className="imgCard">
@@ -15,7 +14,11 @@ function VehicleCard(): any {
       <div className="description">{produto.descrisao}</div>
 
       <div className="nameAndphotoProfile">
-        <img className="imgProfile" alt={produto.name} src={produto.imgPerfil}></img>
+        <img
+          className="imgProfile"
+          alt={produto.name}
+          src={produto.imgPerfil}
+        ></img>
         <div className="nameProfile">{produto.nameOfUser}</div>
       </div>
 
