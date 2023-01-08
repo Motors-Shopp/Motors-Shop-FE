@@ -5,12 +5,13 @@ import styled  from "styled-components";
 
 export const StyleHeader = styled.div`
 
-@media screen and (min-width:200px){
    header{
-    height: 50px;
+    height: 70px;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    background-color: var(--grey10); 
 }
 
 .mobileMenu{
@@ -20,7 +21,6 @@ export const StyleHeader = styled.div`
     margin-right:22px ;
     margin-top:5px ;
     font-size:21px ;
-    /* font-weight: bold */
 }
 
 .logo{
@@ -47,16 +47,7 @@ export const StyleHeader = styled.div`
     display:none ;
 }
 
-}
-
 @media screen and (min-width:700px){
-
-    /* header{
-    height: 50px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-} */
 
 .mobileMenu{
     display:none ;
@@ -64,22 +55,11 @@ export const StyleHeader = styled.div`
 
 .logo{
     font-size: 20px;
-    display: flex;
-    background-color: white;
-    height: 50px;
-    width: 110px;
     margin-left: 35px;
-    align-items: center;
-    color: #36007d;
-    font-weight: bold
 }
 
 .logoShop{
     font-size: 14px;
-    margin-left: 5px;
-    margin-top: 5px;
-    color: #6200e3;
-    font-weight: bold
 }
 
 .headersCategorysAndUsername{
@@ -97,8 +77,8 @@ export const StyleHeader = styled.div`
     align-items: center;
     color:#ced4da ;
     border-right:solid;
+    align-items: center;
     cursor: pointer;
-    
 }
 
 p{
@@ -129,13 +109,5 @@ p{
 }
 
 }
-
-
-
-
-
-
-
-
 
 `

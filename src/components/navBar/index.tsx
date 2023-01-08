@@ -6,7 +6,7 @@ import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 
-import api from "../api";
+import api from "../../services/api/api";
 
 function NavBar(): JSX.Element {
 
