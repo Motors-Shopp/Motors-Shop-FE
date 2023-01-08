@@ -1,92 +1,103 @@
-import styled  from "styled-components";
+import styled from "styled-components";
 
 // import { GlobalStyle } from "../../styles/global";
 
-
 export const Card = styled.div`
-
-/* .card{
+  /* .card{
     background-color: aqua;
 } */
 
-.imgCard{
-    /* background-color: #495057; */
-    background-color:#e9ecef;
-    width: 240px;
-    height: 110px;
-}
+  width: 19.5rem;
+  height: 21.875rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 4px 4px;
 
-.imgCarro{
-    background-color:#e9ecef;
+  .imgCard {
+    /* background-color: #495057; */
+    background-color: #e9ecef;
+    display: flex;
+    justify-content: center;
+  }
+
+  .imgCarro {
+    display: flex;
+    justify-content: center;
+    background-color: #e9ecef;
     width: 220px;
     height: 110px;
     display: flex;
-    justify-content:center;
-    margin-left:10px;
-    margin-top:10px;
-}
+    justify-content: center;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
 
-.isActive-div{
+  .isActive-div {
     width: 35px;
     height: 15px;
-    margin-top:5px;
-    margin-left:15px;
-    position:absolute;
-    font-size:10px;
+    margin-top: 5px;
+    margin-left: 15px;
+    position: absolute;
+    font-size: 10px;
     background-color: #5126ea;
     color: #e9ecef;
-    display:flex;
-    justify-content:center;
-    text-align:center ;
-}
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
 
-.title{
+  .title {
     /* background-color: #495057; */
     width: 240px;
-    font-weight: bold
-}
+    font-weight: bold;
+  }
 
-.description{
+  .description {
     /* background-color: #495057; */
     width: 240px;
-}
+  }
 
-.priceKmYear{
+  .priceKmYear {
     display: flex;
     justify-content: space-between;
     /* background-color: royalblue; */
     width: 240px;
-}
+  }
 
-.priceYear{
+  .priceYear {
     display: flex;
     justify-content: space-between;
     /* background-color: red; */
     width: 75px;
-}
+  }
 
-.imgProfile{
+  .imgProfile {
     width: 25px;
     height: 25px;
-    border-radius:100%;
-}
+    border-radius: 100%;
+  }
 
-.nameAndphotoProfile{
+  .nameAndphotoProfile {
     display: flex;
     justify-content: space-between;
     /* background-color: tan; */
     width: 65px;
-    font-size:15px ;
-    text-align:center ;
-}
+    font-size: 15px;
+    text-align: center;
+  }
 
-.cardInfo{
+  .nameProfile {
+    margin-left: 3px;
+  }
+
+  .cardInfo {
     width: 30px;
     height: 20px;
     margin-top: 5px;
-    margin-left:5px ;
+    margin-left: 5px;
     background-color: #edeafd;
-    color: #5126ea ;
-    font-size: 12px ;
-}
-`
+    color: #5126ea;
+    font-size: 12px;
+  }
+`;
