@@ -2,16 +2,30 @@
 // import Footer from "./components/footers/footer";
 // import Header from "./components/header/index";
 // import Announcement from "./pages/announcements/Announcement";
+import Header from "./components/header/index";
 
-// import Home from "./pages/home/home";
-// import PageOneFindSeller from "./pages/pageForOneSeller/pageForOneSeller";
-import PageIsSeller from "./pages/pageSeller/pageSeller";
+import { Switch, Route } from "react-router-dom";
+
+import LoginFrom from "./components/loginFrom/index";
+import CadastroFrom from "./components/cadastroForm/index";
+// import NavBar from "./components/navBar";
 
 function App() {
   return (
-    <>
-      <PageIsSeller />
-    </>
-  );
-}
+    <Switch>
+      <Route exact path="/home">
+        <Header></Header>
+        {/* <NavBar></NavBar> */}
+      </Route>
+      <Route exact path="/home/:id">
+        <Header></Header>
+      </Route>
+      <Route exact path="/">
+        <LoginFrom></LoginFrom>
+      </Route>
+      <Route exact path="/cadastro">
+        <CadastroFrom></CadastroFrom>
+      </Route>
+    </Switch>
+  )}
 export default App;
