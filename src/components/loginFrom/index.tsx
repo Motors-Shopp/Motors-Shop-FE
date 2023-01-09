@@ -1,5 +1,11 @@
 import { LoginStyle } from "./style";
 
+import React from "react";
+
+import { useHistory } from "react-router-dom";
+
+import * as yup from "yup";
+import { useForm } from "react-hook-form";
 // import {useHistory} from "react-router-dom";
 
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -10,8 +16,12 @@ import Header from "../header/index";
 
 import api from "../api";
 
+import jwt_decode from "jwt-decode";
+
 function LoginFrom(): JSX.Element {
-  //   const history = useHistory();
+  const history = useHistory();
+
+  localStorage.clear();
 
   const formSchema = yup.object().shape({
     name: yup.string().required("Nome obrigatório"),
@@ -36,12 +46,21 @@ function LoginFrom(): JSX.Element {
     //     "email": "loolacerda@gmail.com",
     //     "password": "1234"
     // }
+    async function salvarToken(response:any){
+      console.log(response)
+        localStorage.setItem("TokenMotorsShop",response.data.token)
+      const resposta:any = await jwt_decode(response.data.token)
+      const id = resposta.sub
+        history.push(`/home/${id}`)
+    }
+    
 
     await api
       .post("http://localhost:3005/login", dados)
-      //   .then((response) => history.push("/"))
+      .then((response) => salvarToken(response))
       .catch((err) => {
-        alert("ocoreu um erro");
+        console.log(dados)
+        // alert("ocoreu um erro");
         console.error("ops!" + err);
       });
   };
@@ -84,7 +103,8 @@ function LoginFrom(): JSX.Element {
           <div className="conteiner2">
             <button
               onClick={() => {
-                // history.push("/cadastro");
+                history.push("/cadastro");
+
               }}
               className="button2"
             >
