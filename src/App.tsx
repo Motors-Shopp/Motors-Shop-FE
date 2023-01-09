@@ -4,13 +4,13 @@
 // import Announcement from "./pages/announcements/Announcement";
 
 // import Home from "./pages/home/home";
-import PageOneFindSeller from "./pages/pageForOneSeller/pageForOneSeller";
-// import PageIsSeller from "./pages/pageSeller/pageSeller";
+// import PageOneFindSeller from "./pages/pageForOneSeller/pageForOneSeller";
+import PageIsSeller from "./pages/pageSeller/pageSeller";
 
 function App() {
   return (
     <>
-      <PageOneFindSeller />
+      <PageIsSeller />
     </>
   );
 }
