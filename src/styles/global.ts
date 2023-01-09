@@ -9,6 +9,7 @@ box-sizing: border-box;
 outline: 0;
 list-style: none;
 box-sizing: border-box;
+scroll-behavior: smooth;
 }
 
 :root {
@@ -49,11 +50,6 @@ box-sizing: border-box;
     --ramdom10: #6100ff;
     --random11: #5700e3;
     --random12: #30007d;
-
-
-
 }
-
-
 
 `;

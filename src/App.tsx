@@ -2,16 +2,6 @@
 // import Footer from "./components/footers/footer";
 // import Header from "./components/header/index";
 // import Announcement from "./pages/announcements/Announcement";
-// <<<<<<< HEAD
-// import VehicleCard from "./components/vehicleCard";
-
-// function App() {
-//   return (
-//     <>
-//       <VehicleCard />
-//     </>
-// =======
-
 import Header from "./components/header/index";
 
 import { Switch, Route } from "react-router-dom";
@@ -35,7 +25,6 @@ function App() {
         <CadastroFrom></CadastroFrom>
       </Route>
     </Switch>
-// >>>>>>> e04405b7c22262a4ac83b33a1031a9304d9e5e29
   )}
 
 export default App;

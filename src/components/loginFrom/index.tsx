@@ -6,7 +6,11 @@ import { useHistory } from "react-router-dom";
 
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
+// import {useHistory} from "react-router-dom";
+
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useForm } from "react-hook-form";
+import * as yup from "yup";
 
 import Header from "../header/index";
 
@@ -100,6 +104,7 @@ function LoginFrom(): JSX.Element {
             <button
               onClick={() => {
                 history.push("/cadastro");
+
               }}
               className="button2"
             >
