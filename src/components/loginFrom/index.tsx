@@ -14,9 +14,7 @@ import * as yup from "yup";
 
 import Header from "../header/index";
 
-import api from "../api";
-
-import jwt_decode from "jwt-decode";
+import Api from "../../services/api/api";
 
 function LoginFrom(): JSX.Element {
   const history = useHistory();
@@ -54,10 +52,10 @@ function LoginFrom(): JSX.Element {
         history.push(`/home/${id}`)
     }
     
-
     await api
       .post("http://localhost:3005/login", dados)
       .then((response) => salvarToken(response))
+
       .catch((err) => {
         console.log(dados)
         // alert("ocoreu um erro");

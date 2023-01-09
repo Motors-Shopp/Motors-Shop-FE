@@ -1,24 +1,21 @@
 import { CadastroStyle } from "./style";
 
-import React from "react";
-
 import { useState } from "react";
 
 import Header from "../header/index";
 
-import api from "../api";
+import { useHistory } from "react-router-dom";
+import Api from "../../services/api/api";
 
-import {useHistory} from "react-router-dom";
-
-import * as yup from "yup";
-import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useForm } from "react-hook-form";
+import * as yup from "yup";
 
 function CadastroFrom(): JSX.Element {
   const [is_seller, setIs_seller] = useState(false);
   const [is_client, setIs_client] = useState(true);
 
-  const history = useHistory()
+  const history = useHistory();
 
   const formSchema = yup.object().shape({
     Nome: yup.string().required("Nome obrigatório"),
@@ -64,33 +61,30 @@ function CadastroFrom(): JSX.Element {
     //   "password": data.Senha,
     // };
 
-
-
     const gggg = {
-      "name": data.Nome,
-      "email": data.Email,
-      "cpf": data.cpf,
-      "cellphone": data.Celular,
-      "birthdate": "1993-04-23",
-      "bio": "vazio",
-      "is_seller": is_seller,
-      "is_client": is_client,
-      "password": data.Senha,
-      "address": {
-        "street": data.Estado,
-        "number": data.Numero,
-        "complement": data.Complemento,
-        "district": "district",
-        "state": data.Estado,
+      name: data.Nome,
+      email: data.Email,
+      cpf: data.cpf,
+      cellphone: data.Celular,
+      birthdate: "1993-04-23",
+      bio: "vazio",
+      is_seller: is_seller,
+      is_client: is_client,
+      password: data.Senha,
+      address: {
+        street: data.Estado,
+        number: data.Numero,
+        complement: data.Complemento,
+        district: "district",
+        state: data.Estado,
       },
-    }
+    };
 
     // console.log(dados)
     // console.log(data.Data_de_Nascimento)
 
-    await api
-      .post("http://localhost:3005/users", gggg)
-      .then((response) => history.push("/"))
+    await Api.post("http://localhost:3005/users", gggg)
+      .then((response) => history.push("/login"))
       .catch((err) => {
         // alert("ocoreu um erro");
         console.error("ops!" + err);
