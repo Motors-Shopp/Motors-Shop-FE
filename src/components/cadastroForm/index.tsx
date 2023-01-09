@@ -90,7 +90,7 @@ function CadastroFrom(): JSX.Element {
 
     await api
       .post("http://localhost:3005/users", gggg)
-      .then((response) => history.push("/login"))
+      .then((response) => history.push("/"))
       .catch((err) => {
         // alert("ocoreu um erro");
         console.error("ops!" + err);

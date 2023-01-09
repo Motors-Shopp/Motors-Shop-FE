@@ -51,15 +51,30 @@ export const StyleHeader = styled.div`
 
 @media screen and (min-width:700px){
 
-    /* header{
-    height: 50px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-} */
-
 .mobileMenu{
     display:none ;
+}
+
+.textAjusting01Semlogin{
+    color: #36007d;
+}
+
+.usersnameInternal2Semlogin{
+    display: flex;
+    align-items:center ;
+    justify-content: space-between;
+    width: 250px;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.buttonSemlogin01{
+    width: 90px;
+    height: 30px;
+    font-weight: bold;
+    background-color: white;
+    cursor: pointer;
 }
 
 .logo{
@@ -83,7 +98,7 @@ export const StyleHeader = styled.div`
 }
 
 .headersCategorysAndUsername{
-    width: 350px;
+    width: 400px;
     display: flex;
     justify-content: space-between;
 }
@@ -106,20 +121,12 @@ p{
 }
 
 .usersname{
-    height: 100%;
-    width: 140px;
+    width: 150px;
     display: flex;
     align-items:center ;
-    justify-content:center ;
+    justify-content: space-around;
     cursor: pointer;
 }
-
-.usersnameInternal{
-    display: flex;
-    align-items:center ;
-    justify-content:center ;
-}
-
 
 .imgProfile{
     width: 25px;
@@ -129,13 +136,4 @@ p{
 }
 
 }
-
-
-
-
-
-
-
-
-
 `
