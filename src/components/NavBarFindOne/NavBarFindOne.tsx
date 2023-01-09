@@ -8,7 +8,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 
-import api from "../api";
+import Api from "../../services/api/api";
 
 function NavFindSeller() {
   const formSchema = yup.object().shape({
@@ -43,8 +43,7 @@ function NavFindSeller() {
 
     console.log(dados);
 
-    await api
-      .post("http://localhost:3005/vehicles/", dados)
+    await Api.post("http://localhost:3005/vehicles/", dados)
       .then((response) => console.log(response))
       .catch((err) => {
         alert("ocoreu um erro");
