@@ -77,7 +77,7 @@ function Header(): any {
 
       if(listaUsers){
 
-        console.log(listaUsers.name)
+        // console.log(listaUsers.name)
 
         return (
           <StyleHeader>

@@ -8,12 +8,14 @@ import { Switch, Route } from "react-router-dom";
 
 import LoginFrom from "./components/loginFrom/index";
 import CadastroFrom from "./components/cadastroForm/index";
+// import NavBar from "./components/navBar";
 
 function App() {
   return (
     <Switch>
       <Route exact path="/home">
         <Header></Header>
+        {/* <NavBar></NavBar> */}
       </Route>
       <Route exact path="/home/:id">
         <Header></Header>
