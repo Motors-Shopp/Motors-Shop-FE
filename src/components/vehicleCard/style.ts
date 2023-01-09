@@ -12,6 +12,7 @@ export const Card = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  text-align: initial;
   padding: 4px 4px;
 
   .imgCard {
@@ -50,12 +51,19 @@ export const Card = styled.div`
   .title {
     /* background-color: #495057; */
     width: 240px;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: "Lexend";
+    color: var(--grey1);
   }
 
   .description {
     /* background-color: #495057; */
     width: 240px;
+    font-family: "Inter";
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--grey2);
   }
 
   .priceKmYear {
@@ -63,6 +71,7 @@ export const Card = styled.div`
     justify-content: space-between;
     /* background-color: royalblue; */
     width: 240px;
+    margin: 0;
   }
 
   .priceYear {
@@ -70,6 +79,7 @@ export const Card = styled.div`
     justify-content: space-between;
     /* background-color: red; */
     width: 75px;
+    height: 32px;
   }
 
   .imgProfile {
@@ -83,12 +93,15 @@ export const Card = styled.div`
     justify-content: space-between;
     /* background-color: tan; */
     width: 65px;
-    font-size: 15px;
+    font-size: 0.875rem;
     text-align: center;
   }
 
   .nameProfile {
     margin-left: 3px;
+    color: var(--grey2);
+    font-weight: 500;
+    font-family: "Inter";
   }
 
   .cardInfo {
