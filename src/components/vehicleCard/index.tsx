@@ -57,7 +57,6 @@ function VehicleCard(): any {
   return ggg.map((produto, index) => (
     <Card>
       <div className="imgCard">
-        <div className="isActive-div">Ativo</div>
         <img className="imgCarro" alt={produto.name} src={produto.imagen}></img>
       </div>
       <div className="title">{produto.name}</div>
