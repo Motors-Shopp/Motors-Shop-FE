@@ -64,7 +64,7 @@ function Header(): any {
         return (
         <StyleHeader>
             <header>
-                <div className="headersCategorysAndUsername">
+                <div className="headersCategoriesAndUsername">
                     <div className="categories">
                         <p>Carros</p>
                         <p>Motos</p>

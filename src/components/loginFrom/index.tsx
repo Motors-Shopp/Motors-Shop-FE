@@ -9,8 +9,6 @@ import { useHistory } from "react-router-dom";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
-
-import Header from "../header/index";
 import Api from "../../services/api/api";
 
 function LoginFrom(): JSX.Element {
@@ -62,7 +60,6 @@ function LoginFrom(): JSX.Element {
 
   return (
     <LoginStyle>
-      <Header></Header>
       <div className="container">
         <form className="box" onSubmit={handleSubmit(onSubmitFunction)}>
           <div className="textAjusting2">
