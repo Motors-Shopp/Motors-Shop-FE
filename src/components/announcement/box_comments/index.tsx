@@ -3,7 +3,7 @@ import Comment from "./comment";
 import { ContentComments } from "./style";
 
 import { useEffect,useState } from "react";
-
+import { useParams } from "react-router-dom";
 import api from "../../../services/api/api";
 
 // import jwt_decode from "jwt-decode";
@@ -11,34 +11,30 @@ import api from "../../../services/api/api";
 function Comments(): JSX.Element {
 
   const [ListaDeComentarios, setListaDeComentarios] = useState<any>([]);
+  
+  const params:any =  useParams()
 
   useEffect(() => {
 
-    // const token:any = localStorage.getItem("TokenMotorsShop");
-
-    // const decode:any = jwt_decode(token)
-
     api
-    .get(`http://localhost:3005/comments/`)
+    .get(`http://localhost:3005/comments/vehicles/${params.id}`)
     .then((response) => setListaDeComentarios(response.data))
     .catch((err) => {
       // alert("ocoreu um erro");
       console.error("ops!" + err);
     });
-
-    // const filtro:any = ListaDeComentarios.filter(iten => iten.id === decode.sub);
-
-    // api
-    // .get(`http://localhost:3005/users/${decode.sub}`)
-    // .then((response) => setuser(response.data))
-    // .catch((err) => {
-    //   // alert("ocoreu um erro");
-    //   console.error("ops!" + err);
-    // });
     
-  },[]);
-
+  },[params]);
+  // http://localhost:3005/comments/vehicles/b55f9350-b41f-4ae8-8dd8-e29a0913769a
   // console.log(ListaDeComentarios)
+
+  if(ListaDeComentarios.length === 0){
+    return (
+      <ContentComments>
+        <h1>Sem comentarios</h1>
+      </ContentComments>
+    )
+  }
 
 
   return (
@@ -48,7 +44,7 @@ function Comments(): JSX.Element {
         <Comment
           key={cmt.id}
           name={cmt.user.name}
-          img={"sem foto de usuario"}
+          img={cmt.user.user_picture}
           date={cmt.date}
           text={cmt.comment}
         />

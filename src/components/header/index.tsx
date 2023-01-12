@@ -1,6 +1,6 @@
 import { StyleHeader } from "./style";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 
 
 import {useHistory} from "react-router-dom";
@@ -9,34 +9,27 @@ import {useHistory} from "react-router-dom";
 
 import api from "../../services/api/api";
 
+import jwt_decode from "jwt-decode";
+
 function Header(): any {
 
   const [checkLogado, setCheckLogado] = useState(false);
   const [listaUsers, setlistaUsers] = useState<any>([]);
 
   const history =  useHistory()
-  const params:any = useParams()
-
-
-  // async function consumirApiUser(){
-  //   await api
-  //     .get(`http://localhost:3005/users/${params.id}`)
-  //     .then((response) => setlistaUsers(response.data))
-  //     .catch((err) => {
-  //       // alert("ocoreu um erro");
-  //       console.error("ops!" + err);
-  //     });
-  // }
 
   useEffect(() => {
 
-    const token = localStorage.getItem("TokenMotorsShop");
+    const token:any = localStorage.getItem("TokenMotorsShop");
 
     if (token) {
       setCheckLogado(true);
 
+    const decode:any = jwt_decode(token)
+
+
       api
-      .get(`http://localhost:3005/users/${params.id}`)
+      .get(`http://localhost:3005/users/${decode.sub}`)
       .then((response) => setlistaUsers(response.data))
       .catch((err) => {
         // alert("ocoreu um erro");
@@ -45,7 +38,7 @@ function Header(): any {
       });
   }
     
-  },[params]);
+  },[]);
   
   if (checkLogado === false) {
     return (
@@ -96,9 +89,9 @@ function Header(): any {
                 <div className="usersname">
                     <img
                       className="imgProfile"
-                      alt={"produto.name"}
+                      alt={listaUsers.name}
                       src={
-                        "https://s2.glbimg.com/s5qbLhszZPNbfGmtPpqVEs65E6g=/0x0:1980x1121/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_cf9d035bf26b4646b105bd958f32089d/internal_photos/bs/2021/N/p/VM7L3XRr2LKluhDgfJqg/fiatpulse-frontal.jpeg"
+                        listaUsers.user_picture
                       }
                     ></img>
                     <p>{listaUsers.name}</p>
