@@ -1,116 +1,118 @@
 import styled from "styled-components";
 
-// import { GlobalStyle } from "../../styles/global";
-
 export const Card = styled.div`
-  /* .card{
-    background-color: aqua;
-} */
+    width: 275px;
+    height: 350px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    padding: 15px;
+        
+    .cardContent {
+        width: 100%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 25px;
+        text-align: initial;
+        margin: 0;
+        overflow: hidden;
+    }
 
-  width: 19.5rem;
-  height: 21.875rem;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  text-align: initial;
-  padding: 4px 4px;
+.imgCard {
+    margin: 0;
+    width: 100%;
+    height: 40%;
+    background-color: var(--grey6);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-  .imgCard {
-    /* background-color: #495057; */
+.imgCarro {
+    display: flex;
+    justify-content: center;
     background-color: #e9ecef;
+    width: 90%;
+    height: 85%;
     display: flex;
     justify-content: center;
-  }
+    align-items: center;
+}
 
-  .imgCarro {
-    display: flex;
-    justify-content: center;
-    background-color: #e9ecef;
-    width: 220px;
-    height: 110px;
-    display: flex;
-    justify-content: center;
-    margin-left: 10px;
-    margin-top: 10px;
-  }
-
-  .isActive-div {
-    width: 35px;
-    height: 15px;
-    margin-top: 5px;
-    margin-left: 15px;
-    position: absolute;
-    font-size: 10px;
-    background-color: #5126ea;
-    color: #e9ecef;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .title {
-    /* background-color: #495057; */
+.title {
     width: 240px;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-family: "Lexend";
     color: var(--grey1);
-  }
+    padding-bottom: 10px;
+}
 
-  .description {
-    /* background-color: #495057; */
-    width: 240px;
+.description {
     font-family: "Inter";
-    font-size: 0.875rem;
-    font-weight: 400;
+    font-size: 0.9rem;
     color: var(--grey2);
-  }
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 16px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
 
-  .priceKmYear {
+.ownerAndPrice{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    span {
+        font-weight: 600;
+    }
+}
+
+.priceKmYear {
     display: flex;
     justify-content: space-between;
-    /* background-color: royalblue; */
-    width: 240px;
-    margin: 0;
-  }
+}
 
-  .priceYear {
+.priceYear {
     display: flex;
-    justify-content: space-between;
-    /* background-color: red; */
-    width: 75px;
+    gap: 8px;
+    align-items: center;
+    width: 50%;
     height: 32px;
-  }
+}
 
-  .imgProfile {
+.imgProfile {
     width: 25px;
     height: 25px;
     border-radius: 100%;
-  }
+}
 
-  .nameAndphotoProfile {
+.nameAndphotoProfile {
     display: flex;
     justify-content: space-between;
-    /* background-color: tan; */
     width: 65px;
     font-size: 0.875rem;
     text-align: center;
-  }
+}
 
-  .nameProfile {
+.nameProfile {
     margin-left: 3px;
     color: var(--grey2);
     font-weight: 500;
     font-family: "Inter";
-  }
+}
 
-  .cardInfo {
+.cardInfo {
     width: 30px;
     height: 20px;
-    margin-top: 5px;
-    margin-left: 5px;
-    background-color: #edeafd;
-    color: #5126ea;
+    /* margin-top: 5px;
+    margin-left: 5px; */
+    background-color: var(--brand4);
+    color: var(--brand2);
     font-size: 12px;
-  }
-`;
+}`

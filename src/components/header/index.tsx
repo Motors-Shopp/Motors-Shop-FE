@@ -44,15 +44,9 @@ function Header(): any {
     return (
       <StyleHeader>
         <header>
-          <div className="logo">
-            <div>Motors</div>
-            <div className="logoShop">shop</div>
-          </div>
-          <div className="headersCategorysAndUsername">
-            <div className="categorys">
-              <p>Carros</p>
-              <p>Motos</p>
-              <p>Leilão</p>
+            <div className="logo">
+                <h1 >Motors</h1>
+                <span className="logoShop"> shop </span>
             </div>
             <div className="usersnameInternal2Semlogin">
                 <div onClick={()=>{history.push("/")}} className="textAjusting01Semlogin">Fazer Login</div>
@@ -67,24 +61,10 @@ function Header(): any {
       </StyleHeader>
     )}
     else{
-
-      if(listaUsers){
-
-        // console.log(listaUsers.name)
-
-        return (
-          <StyleHeader>
-            <header>
-              <div className="logo">
-                <div>Motors</div>
-                <div className="logoShop">shop</div>
-              </div>
-      
-              <div className="headersCategorysAndUsername">
-                <div className="categorys">
-                  <p>Carros</p>
-                  <p>Motos</p>
-                  <p>Leilão</p>
+            <div className="headersCategorysAndUsername">
+                <div className="categories">
+                    <p>Carros</p>
+                    <p>Motos</p>
                 </div>
                 <div className="usersname">
                     <img
@@ -96,26 +76,21 @@ function Header(): any {
                     ></img>
                     <p>{listaUsers.name}</p>
                 </div>
-              </div>
-              {/* mobile */}
-              <div className="mobileMenu">
+
+            </div>
+            {/* mobile */}
+            <div className="mobileMenu">
                 <span>☰</span>
               </div>
             </header>
-            {/* <div>
-                  fdfsd
-              </div> */}
           </StyleHeader>
-        );
+        };
         
       }
 
-
-     
-
-    }
-
- 
+        </header>
+    </StyleHeader>
+    
 }
 
 export default Header;

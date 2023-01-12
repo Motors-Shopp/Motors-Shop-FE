@@ -15,7 +15,7 @@ export const ggg = [
       type: 'carro',
       preco:"700.000,00",
       nameOfUser: "suze",
-      descrisao:"is simply dummy text of the printing",
+      descrisao:"is simply dummy text of the printing i printing is simply dummy he printing printing i printing is simply dummy he printing",
       imgPerfil:"https://s2.glbimg.com/s5qbLhszZPNbfGmtPpqVEs65E6g=/0x0:1980x1121/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_cf9d035bf26b4646b105bd958f32089d/internal_photos/bs/2021/N/p/VM7L3XRr2LKluhDgfJqg/fiatpulse-frontal.jpeg",
       imagen:
         "https://cdn.dooca.store/1841/files/carro-cyberpunk2.png?v=1608241638&webp=0",

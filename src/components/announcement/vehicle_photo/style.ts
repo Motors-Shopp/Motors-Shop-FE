@@ -2,14 +2,10 @@ import styled from "styled-components";
 
 export const ContentVehiclePhoto = styled.div`
   display: flex;
-
   width: 47rem;
   height: 22.188rem;
-
   border-radius: 4px;
-
   background: var(--grey10);
-
   align-items: center;
   justify-content: center;
 
@@ -18,6 +14,6 @@ export const ContentVehiclePhoto = styled.div`
     height: 15.81rem;
   }
 
-  @media (max-width: 375px) {
+  @media screen and (max-width: 375px) {
   }
 `;
