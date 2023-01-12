@@ -4,7 +4,7 @@ import { ContentVehicleInfo } from "./style";
 
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import api from "../../../services/api/api";
+import Api from "../../../services/api/api";
 
 function VehicleInfo(): JSX.Element {
 
@@ -14,7 +14,7 @@ function VehicleInfo(): JSX.Element {
 
   useEffect(() => {
 
-    api
+    Api
     .get(`http://localhost:3005/vehicles/${params.id}`)
     .then((response) => setveicle(response.data))
     

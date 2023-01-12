@@ -1,16 +1,29 @@
 import Footer from "./components/footers/footer";
 import Header from "./components/header";
-import Announcement from "./pages/announcements/Announcement";
+import { Switch, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
-
-// import PageOneFindSeller from "./pages/pageForOneSeller/pageForOneSeller";
-// import PageIsSeller from "./pages/pageSeller/pageSeller";
+import Announcement from "./pages/announcements/Announcement";
+import LoginFrom from "./components/loginFrom";
+import CadastroFrom from "./components/cadastroForm";
 
 function App() {
     return (
-        <>  
+        <>
             <Header />
-            <Home />
+            <Switch>
+                <Route exact path="/home">
+                    <Home />
+                </Route>
+                <Route exact path="/Announcement/:id">
+                    <Announcement />
+                </Route>
+                <Route exact path="/">
+                    <LoginFrom />
+                </Route>
+                <Route exact path="/cadastro">
+                    <CadastroFrom />
+                </Route>
+            </Switch>
             <Footer />
         </>
     );

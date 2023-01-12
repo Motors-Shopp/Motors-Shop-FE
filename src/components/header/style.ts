@@ -32,33 +32,23 @@ export const StyleHeader = styled.div`
     }
 
     .logoShop {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: var(--random5);
       font-weight: bold;
-      padding: 8px 0 0 5px;
+      padding: 10px 0 0 5px;
     }
 
-    .headersCategorysAndUsername {
+    .headersCategoriesAndUsername {
       display: none;
     }
 
   @media screen and (min-width: 700px) {
 
-.mobileMenu{
-    display:flex ;
-    justify-content:center ;
-    align-items:center ;
-    margin-right:22px ;
-    margin-top:5px ;
-    font-size:21px ;
-    /* font-weight: bold */
-}
-
     .logo {
       padding-left: 40px;
     }
 
-.headersCategorysAndUsername{
+.headersCategoriesAndUsername{
     display:none ;
 }
 
@@ -83,7 +73,7 @@ export const StyleHeader = styled.div`
 }
 
 .textAjusting01Semlogin{
-    color: #36007d;
+    color: var(--random12);
 }
 
 .usersnameInternal2Semlogin{
@@ -100,51 +90,18 @@ export const StyleHeader = styled.div`
     width: 90px;
     height: 30px;
     font-weight: bold;
-    background-color: white;
+    background-color: var(--whiteFixed);
     cursor: pointer;
 }
 
 .logo{
-    font-size: 20px;
-    display: flex;
-    background-color: white;
-    height: 50px;
-    width: 110px;
-    margin-left: 35px;
-    align-items: center;
-    color: #36007d;
-    font-weight: bold
-}
-
-.logoShop{
-    font-size: 14px;
-    margin-left: 5px;
-    margin-top: 5px;
-    color: #6200e3;
-    font-weight: bold
+    font-size: 1rem;
 }
 
 .headersCategorysAndUsername{
     width: 400px;
     display: flex;
     justify-content: space-between;
-}
-
-.categorys{
-    height: 100%;
-    width: 200px;
-    font-size: 15px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color:#ced4da ;
-    border-right:solid;
-    cursor: pointer;
-    
-}
-
-p{
-    color:#868e88 ;
 }
 
 .usersname{

@@ -2,8 +2,6 @@ import { CadastroStyle } from "./style";
 
 import { useState } from "react";
 
-import Header from "../header/index";
-
 import { useHistory } from "react-router-dom";
 import Api from "../../services/api/api";
 
@@ -94,7 +92,6 @@ function CadastroFrom(): JSX.Element {
 
   return (
     <CadastroStyle>
-      <Header></Header>
       <div className="containerCadastro">
         <form onSubmit={handleSubmit(onSubmitFunction)} className="boxCadastro">
           <div className="textAjustingCadastro2">Cadastro</div>
