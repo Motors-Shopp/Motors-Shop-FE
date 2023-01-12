@@ -19,16 +19,6 @@ function NavBar(): JSX.Element {
         ImagemDaGaleria1: yup.string(),
     });
 
-    const formSchema = yup.object().shape({
-        Titulo: yup.string().required("obrigatório"),
-        Ano: yup.string().required(" obrigatório"),
-        Quilometragem: yup.string().required(" obrigatório"),
-        Preço: yup.string().required(" obrigatório"),
-        descrisção: yup.string().required(" obrigatório"),
-        imagemDaCapa: yup.string().required(" obrigatório"),
-        ImagemDaGaleria1: yup.string(),
-    });
-
     const {
         register,
         handleSubmit,
@@ -91,7 +81,7 @@ function NavBar(): JSX.Element {
             </div>
         </div>
     </StyleNavBar>
-  );
+  ;
 }
 
 export default NavBar;

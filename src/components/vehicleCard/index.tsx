@@ -75,7 +75,7 @@ function VehicleCard(type: any): any {
                             <span className="cardInfo">{produto.kilometers} KM</span>
                             <span className="cardInfo">{produto.year}</span>
                         </div>
-                        <span>R${produto.price}</div>
+                        <span>R${produto.price}</span>
                     </div>
                 </section>
             </Card>
