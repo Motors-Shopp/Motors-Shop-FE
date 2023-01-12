@@ -1,24 +1,28 @@
-import Showcase from "../showcase/Showcase"
-import { BannerButton, HomeBanner } from "./style"
+import Footer from "../../components/footers/footer";
+import Header from "../../components/header";
+import NavBar from "../../components/navBar";
+import VehicleCard from "../../components/vehicleCard";
+import { PageHome } from "./style";
 
 function Home() {
     return (
         <>
-            <HomeBanner>
-                <section>
+            <Header />
+            <NavBar />
+            <PageHome>
+                    <h2>Carro</h2>
+                    <section className="vehicles">
+                        <VehicleCard />
+                    </section>
 
-                    <h2>Velocidade e experiência em um lugar feito para você</h2>
-
-                    <p>Um ambiente feito para você explorar o seu melhor</p>
-
-                    <div>
-                        <BannerButton>Carros</BannerButton>
-                        <BannerButton>Motos</BannerButton>
-                    </div>
-                </section>
-            </HomeBanner>
-            <Showcase />
+                    <h2>Motos</h2>
+                    <section className="vehicles">
+                        <VehicleCard />
+                    </section>
+            </PageHome>
+            <Footer />
         </>
-    )
+    );
 }
-export default Home
+
+export default Home;
