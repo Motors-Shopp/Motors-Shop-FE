@@ -15,6 +15,44 @@ export const ContentBoxMessage = styled.div`
   padding: 2rem 2rem;
   justify-content: space-around;
 
+  button{
+  background: var(--brand1);
+  color: var(--whiteFixed);
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 0rem 1.396rem;
+
+  gap: 0.634rem;
+
+  width: 9.125rem;
+  height: 3rem;
+
+  border: 1px solid var(--brand1);
+  border-radius: 4px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+
+  :hover {
+    background: var(--brand2);
+  }
+
+  cursor: pointer;
+
+  @media (max-width: 320px) {
+    width: 7.438rem;
+    height: 2.375rem;
+
+    font-size: 0.875rem;
+  }
+  }
+
   div:first-of-type {
     display: flex;
     flex-direction: row;

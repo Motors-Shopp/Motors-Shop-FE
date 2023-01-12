@@ -12,7 +12,7 @@ import * as yup from "yup";
 
 import Header from "../header/index";
 
-import jwt_decode from "jwt-decode";
+// import jwt_decode from "jwt-decode";
 
 import api from "../../services/api/api";
 
@@ -47,9 +47,9 @@ function LoginFrom(): JSX.Element {
     async function salvarToken(response:any){
       console.log(response)
         localStorage.setItem("TokenMotorsShop",response.data.token)
-      const resposta:any = await jwt_decode(response.data.token)
-      const id = resposta.sub
-        history.push(`/home/${id}`)
+      // const resposta:any = await jwt_decode(response.data.token)
+      // const id = resposta.sub
+        history.push(`/home/`)
     }
     
     await api
