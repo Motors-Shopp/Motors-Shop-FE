@@ -10,7 +10,7 @@ function VehicleInfo(): JSX.Element {
 
   const params:any =  useParams()
 
-  const [veicle, setveicle] = useState<any>([]);
+  const [vehicle, setveicle] = useState<any>([]);
 
   useEffect(() => {
 
