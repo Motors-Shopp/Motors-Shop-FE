@@ -4,8 +4,6 @@ import React from "react";
 
 import { useHistory } from "react-router-dom";
 
-import * as yup from "yup";
-import { useForm } from "react-hook-form";
 // import {useHistory} from "react-router-dom";
 
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -14,7 +12,9 @@ import * as yup from "yup";
 
 import Header from "../header/index";
 
-import Api from "../../services/api/api";
+// import jwt_decode from "jwt-decode";
+
+import api from "../../services/api/api";
 
 function LoginFrom(): JSX.Element {
   const history = useHistory();
@@ -47,9 +47,9 @@ function LoginFrom(): JSX.Element {
     async function salvarToken(response:any){
       console.log(response)
         localStorage.setItem("TokenMotorsShop",response.data.token)
-      const resposta:any = await jwt_decode(response.data.token)
-      const id = resposta.sub
-        history.push(`/home/${id}`)
+      // const resposta:any = await jwt_decode(response.data.token)
+      // const id = resposta.sub
+        history.push(`/home/`)
     }
     
     await api

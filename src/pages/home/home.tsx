@@ -12,14 +12,14 @@ function Home() {
         <NavBar />
         <h2>Carro</h2>
         <section>
-          <VehicleCard />
-          <VehicleCard />
+          <VehicleCard type = "car"/>
+          {/* <VehicleCard /> */}
         </section>
 
         <h2>Motos</h2>
         <section>
-          <VehicleCard />
-          <VehicleCard />
+          {/* <VehicleCard /> */}
+          <VehicleCard type = "motorbike"/>
         </section>
       </PageHome>
       <Footer />
