@@ -1,122 +1,76 @@
 import styled  from "styled-components";
 
-
 export const StyleNavBar = styled.div`
-
-@media screen and (min-width:200px){
-
     width: 100%;
-    height: 300px;
-    background-color: #6100ff;
+    height: 500px;
+    background-color: var(--brand2);
     display: flex;
-    /* flex-direction: row; */
     justify-content: center;
     align-items: center;
-
-.Pdesktop{
-    display: none;
-}
+    font-family: "Lexend";
 
 .conteiner{
-    width: 400px;
-    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 5%;
+    gap: 45px;
+    text-align: center;
 }
 
 .title{
-    color: #ffffff;
-    font-size: 18px;
-    margin-bottom: 20px;
-    font-weight: bold
+    color: var(--whiteFixed);
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
-.Pmobile{
+.Pmobile, .Pdesktop{
     display: flex;
     justify-content: center;
 }
 
 .description{
-    font-size: 9px;
+    font-size: 0.9rem;
     display: flex;
     justify-content: center;
-    color: white;
+    color: var(--whiteFixed);
 }
 
 .categories{
-    font-size: 14px;
-    display: column;
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
 }
 
 .btnHome{
-    margin-right: 2px;
-    margin-left: 2px;
-    width: 98%;
-    color: white;
-    border: 1px solid #ffffff;
-    background-color: #6100ff;
-    height: 30px;
-    margin-bottom: 8px;
+    width: 100%;
+    font-size: 1rem;
+    color: var(--whiteFixed);
+    border: 1px solid var(--whiteFixed);
+    background-color: var(--random10);
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
 }
-
-}
-
 
 @media screen and (min-width:700px){
- 
-    width: 100%;
-    height: 250px;
-    background-color: #6100ff;
-    display: flex;
-    /* flex-direction: row; */
-    justify-content: center;
-    align-items: center;
+    height: 400px;
 
-.Pmobile{
-    display: none;
-}
-
-.conteiner{
-    /* background-color: red; */
-    width: 400px;
-    height: 150px;
+.conteiner {
+    width: 50%;
 }
 
 .title{
-    color: #ffffff;
-    font-size: 28px;
-    margin-bottom: 16px;
-    font-weight: bold
-}
-
-.Pdesktop{
-    display: flex;
-    justify-content: center;
-}
-
-.description{
-    font-size: 9px;
-    display: flex;
-    justify-content: center;
-    color: white;
+    font-size: 1.6rem;
 }
 
 .categories{
-    font-size: 14px;
     display: flex;
-    justify-content: center;
-    margin-top: 16px;
+    flex-direction: row;
+    width:50%;
+    gap: 20px;
 }
-
-.btnHome{
-    margin-right: 2px;
-    margin-left: 2px;
-    width: 98%;
-    color: white;
-    border: 1px solid #ffffff;
-    background-color: #6100ff;
-    height: 30px;
-    margin-bottom: 8px;
-}
-
-
 }`

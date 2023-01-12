@@ -83,7 +83,8 @@ function CadastroFrom(): JSX.Element {
     // console.log(dados)
     // console.log(data.Data_de_Nascimento)
 
-    await Api.post("http://localhost:3005/users", gggg)
+    await Api
+      .post("http://localhost:3005/users", gggg)
       .then((response) => history.push("/login"))
       .catch((err) => {
         // alert("ocoreu um erro");
