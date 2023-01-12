@@ -6,13 +6,13 @@ import { useState } from "react";
 
 import Header from "../header/index";
 
-import api from "../api";
 
 import {useHistory} from "react-router-dom";
 
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import Api from "../../services/api/api";
 
 function CadastroFrom(): JSX.Element {
   const [is_seller, setIs_seller] = useState(false);
@@ -88,7 +88,7 @@ function CadastroFrom(): JSX.Element {
     // console.log(dados)
     // console.log(data.Data_de_Nascimento)
 
-    await api
+    await Api
       .post("http://localhost:3005/users", gggg)
       .then((response) => history.push("/login"))
       .catch((err) => {

@@ -7,8 +7,7 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 
 import Header from "../header/index";
-
-import api from "../api";
+import Api from "../../services/api/api";
 
 function LoginFrom(): JSX.Element {
   //   const history = useHistory();
@@ -37,7 +36,7 @@ function LoginFrom(): JSX.Element {
     //     "password": "1234"
     // }
 
-    await api
+    await Api
       .post("http://localhost:3005/login", dados)
       //   .then((response) => history.push("/"))
       .catch((err) => {

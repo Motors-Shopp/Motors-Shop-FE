@@ -1,76 +1,42 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
-export const HomeBanner = styled.div`
+export const PageHome = styled.nav`
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 15px;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  padding: 1rem 40px;
+
+  background: linear-gradient(180deg, var(--grey8) 31.26%, var(--grey8) 100%);
+
+  .vehicles {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
     width: 100%;
-    height: 600px;
-    padding: 20% 5%;
-
-
-    background-color: var(--brand2);
-    color: var(--grey10);
-
-    section {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 45px;
-        max-width: 700px;
+    gap: 2rem;
+    overflow-x: scroll;
+    
+    ::-webkit-scrollbar {
+        background-color: var(--grey8);
+        border-radius: 25px;
+        height: 8px;
     }
-
-    h2, p {
-        text-align: center;
+    
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--grey5);
+        border: 3px solid var(--grey5);
+        border-radius: 25px;
     }
+  }
 
-    div{
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        width: 100%;
-    }
-
-    @media (min-width: 600px) {
-        padding: 5%;
-        max-height: 450px;
-
-        div {
-            max-width: 450px;
-            flex-direction: row;
-        }
-    }
-`
-
-export const BannerButton = styled.button`
-    background: transparent;
-    color: var(--grey10);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 12px;
-    gap: 25px;
-    width: 100%;
-    height: 60px;
-
-    border: 1px solid var(--grey10);
-    border-radius: 4px;
-
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1rem;
-
-    cursor: pointer;
-
-    :hover {
-        background: transparent;
-        color: var(--grey9);
-    }
-
-    @media (min-width: 600px) {
-        
-    }
-`
+  h2 {
+    margin-top: 6rem;
+    font-family: "Lexend";
+  }
+`;

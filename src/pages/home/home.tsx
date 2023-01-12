@@ -5,26 +5,24 @@ import VehicleCard from "../../components/vehicleCard";
 import { PageHome } from "./style";
 
 function Home() {
-  return (
-    <>
-      <Header />
-      <PageHome>
-        <NavBar />
-        <h2>Carro</h2>
-        <section>
-          <VehicleCard />
-          <VehicleCard />
-        </section>
+    return (
+        <>
+            <Header />
+            <NavBar />
+            <PageHome>
+                    <h2>Carro</h2>
+                    <section className="vehicles">
+                        <VehicleCard />
+                    </section>
 
-        <h2>Motos</h2>
-        <section>
-          <VehicleCard />
-          <VehicleCard />
-        </section>
-      </PageHome>
-      <Footer />
-    </>
-  );
+                    <h2>Motos</h2>
+                    <section className="vehicles">
+                        <VehicleCard />
+                    </section>
+            </PageHome>
+            <Footer />
+        </>
+    );
 }
 
 export default Home;

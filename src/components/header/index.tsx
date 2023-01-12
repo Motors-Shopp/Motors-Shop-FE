@@ -6,19 +6,15 @@ function Header(): JSX.Element {
     return <StyleHeader>
         <header>
             <div className="logo">
-                <div>
-                    Motors 
-                </div>
-                <div className="logoShop">
-                    shop
-                </div>
+                <h1 >Motors</h1>
+                <span className="logoShop"> shop </span>
             </div>
 
             <div className="headersCategorysAndUsername">
-                <div className="categorys">
+                <div className="categories">
                     <p>Carros</p>
                     <p>Motos</p>
-                    <p>Leilão</p>
+                    {/* <p>Leilão</p> */}
                 </div>
                 <div className="usersname">
                     <div className="usersnameInternal">
@@ -27,8 +23,6 @@ function Header(): JSX.Element {
                     </div>
                 </div>
 
-
-                
             </div>
             {/* mobile */}
             <div className="mobileMenu">
@@ -36,9 +30,6 @@ function Header(): JSX.Element {
             </div>
 
         </header>
-        {/* <div>
-            fdfsd
-        </div> */}
     </StyleHeader>
     
 }
